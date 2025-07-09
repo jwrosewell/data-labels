@@ -20,7 +20,7 @@ that describes the legal basis associated with the data at the node.
 LBU documents must be immutable and never change once published. They should
 therefore contain a version component in their construction.
 
-The implementor detects a change to the content of the LBU document which does
+If the implementor detects a change to the content of the LBU document which does
 not relate to user preferences such as language, then the implementor SHOULD
 consider the LBU value to be unusable and reject it. This behavior encourages
 authors of LBU documents to exercise strict version controls.
