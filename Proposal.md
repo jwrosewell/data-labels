@@ -360,7 +360,7 @@ This proposal;
     subject to the same legal agreement. For example, the non-personal data of
     make and model of the device used by an individual organization might be
     shared under a different legal basis to the personal data of an individual
-    when both are included in the same data structure. Another example; could be
+    when both are included in the same data structure. Another example could be
     the legal basis for each individual enhanced identifier included in the
     request might be different.
 4.  Signal non-personal data - Most data protection laws require an impact
