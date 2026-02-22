@@ -2,25 +2,36 @@
 
 Editor:
 
--   James Rosewell (51Degrees and Movement for an Open Web)
+- James Rosewell (51Degrees and Movement for an Open Web)
 
 Contributors:
 
--   Jason Bier (General Counsel and Chief Privacy Officer at Adstra; President
-    of the Federation for Internet Alerts)
--   Alan Chapell (Counsel: Privacy, Competition, AI)
--   Tim Cowen (Chair, Antitrust Practice at Preiskel & Co LLP)
--   Stephen Kinsella OBE (EU Lawyer, Founder of Clean Up The Internet, Founder
-    of Law For Change, Chair of Trustees at Press Justice Project, Deputy Chair
-    at Reprieve, Senior Advisor Flint Global, Director Stroud Book Festival)
--   Joshua Koran (Koran Consulting)
--   Richard Reeves (Managing Director at AOP (Association of Online Publishers))
+- Jason Bier (General Counsel and Chief Privacy Officer at Adstra; President of
+  the Federation for Internet Alerts)
+- Alan Chapell (Counsel: Privacy, Competition, AI)
+- Tim Cowen (Chair, Antitrust Practice at Preiskel & Co LLP)
+- Stephen Kinsella OBE (EU Lawyer, Founder of Clean Up The Internet, Founder of
+  Law For Change, Chair of Trustees at Press Justice Project, Deputy Chair at
+  Reprieve, Senior Advisor Flint Global, Director Stroud Book Festival)
+- Joshua Koran (Koran Consulting)
+- Richard Reeves (Managing Director at AOP (Association of Online Publishers))
 
 ## Change History
 
-| **Date**           | **Change Summary**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 20th February 2026 | Added a use case concerning licensing content protected by copyright for Artificial Intelligence (AI) purposes. General text modified to reflect this expansion.<br>Replaced TUI (Legal Basis URL) with TUI (Terms Unique Identifier) as this is more general and suited to a wider range of use cases. The TUI is not restricted to being a Universal Resource Location (URL) and could be any unique identifier within a scheme agreed by the parties. A URL implementation remains the primary example.<br>Modified the CSP changes to require the user agent to confirm that the user has accepted at least on the TUI values. This is needed to prevent web browsers being used to obtain content protected by copyright via display to users. |
+### February 2026
+
+- Added a use case concerning licensing content protected by copyright for
+  Artificial Intelligence (AI) purposes. General text modified to reflect this
+  expansion.
+- Replaced LBU (Legal Basis URL) with TDL (Terms Document Locator) as this is
+  more general and suited to a wider range of use cases. The TDL is not
+  restricted to being a Universal Resource Location (URL) and could be any
+  unique identifier within a scheme agreed by the parties. A URL implementation
+  remains the primary example.
+- Modified the CSP changes to require the user agent to confirm that the user
+  has accepted at least on the TDL values. This is needed to prevent web
+  browsers being used to obtain content protected by copyright via display to
+  users.
 
 ## Executive Summary
 
@@ -66,7 +77,7 @@ vendors. With additional information privacy and copyright can be improved via
 enforcement of terms without restricting interoperability.
 
 This proposal consists of a data model that attaches a label in the form of an
-immutable Terms Unique Identifier (TUI) field to digital content, web browser
+immutable Terms Document Locator (TDL) field to digital content, web browser
 storage, and any onward use of the data. Examples cover content subject to
 copyright, all web cookies, and the OpenRTB protocol used in advertising. The
 general term for the concept is a data label, i.e. “data that has a label
@@ -74,7 +85,7 @@ attached to it which describes the terms under which it is being provided by the
 sender to the recipient such that the recipient can either accept or reject
 those terms unambiguously”.
 
-The TUI is a reference to an immutable document describing the terms and
+The TDL is a reference to an immutable document describing the terms and
 conditions under which the data is made available including collection, storage,
 initial use, any onward use, and restrictions related to the associated data
 such that recipients can share or use the data based on rules defined by the
@@ -103,17 +114,17 @@ protections for copyright holders so that they can decide if and how to license
 their copyrighted material for onward use. The current model suffers from the
 following constraints.
 
-1.  Web browser vendors seek to restrict data interoperability by defining a
-    “privacy boundary” based solely on the single dimension of registerable
-    domain names. This restriction is popularly understood as the deprecation of
-    third-party cookies.
-2.  The programmatic advertising supply chains cannot easily demonstrate
-    compliance with legal obligations and publishers lack the control needed to
-    improve control over their data.
-3.  Those ingesting copyrighted material such as AI vendors cannot be certain
-    that they have done so legally and in compliance with terms defined and
-    agreed with copyright holders. This uncertainty creates liability for onward
-    use.
+1. Web browser vendors seek to restrict data interoperability by defining a
+   “privacy boundary” based solely on the single dimension of registerable
+   domain names. This restriction is popularly understood as the deprecation of
+   third-party cookies.
+2. The programmatic advertising supply chains cannot easily demonstrate
+   compliance with legal obligations and publishers lack the control needed to
+   improve control over their data.
+3. Those ingesting copyrighted material such as AI vendors cannot be certain
+   that they have done so legally and in compliance with terms defined and
+   agreed with copyright holders. This uncertainty creates liability for onward
+   use.
 
 More recently Privacy Enhancing Technologies (PETs) based on purely technical
 methods of restricting specific types of data processing or data outputs have
@@ -316,8 +327,8 @@ Similarly the results of AI prompts could be accompanied with the data labels
 and copyright holders identities used to provide the result. Over time the
 absence of data labels and copyright holders identities would become an
 indicator that the AI vendor might not be respecting copyright. Access software
-could be offer a warning to people indicating that sources and proof of license
-was not provided.
+could offer a warning to people indicating that sources and proof of license was
+not provided.
 
 In summary a new wave of innovation will be unleashed that cannot be predicted
 but that will generate competition among solutions. That innovation will not be
@@ -467,43 +478,43 @@ privacy.[^5]
 
 This proposal;
 
-1.  Is intended to operate in parallel with other signaling methods including
-    existing internet domain name data protection boundaries, TCF, GPP, PET
-    output and input data, and others.
-2.  Is decentralized and empowers each data collection and sharing organization
-    to decide on and signal their own terms.
-3.  Recognizes not all the data included in a single OpenRTB transaction is
-    subject to the same legal agreement. For example, the non-personal data of
-    make and model of the device used by an individual organization might be
-    shared under a different legal basis to the personal data of an individual
-    when both are included in the same data structure. Another example; could be
-    the legal basis for each individual enhanced identifier included in the
-    request might be different.
-4.  Signal non-personal data - Most data protection laws require an impact
-    assessment to determine the risk associated with the data or processing.
-    Where non-personal data is concerned no basis is required for collection and
-    processing. An improvement this proposal enables is an explanation
-    concerning why non-personal data is not personal data thus clearly signaling
-    to others why the data is not personal data and is not subject to any
-    restrictions. This proposal supports the provision of such an explanation.
+1. Is intended to operate in parallel with other signaling methods including
+   existing internet domain name data protection boundaries, TCF, GPP, PET
+   output and input data, and others.
+2. Is decentralized and empowers each data collection and sharing organization
+   to decide on and signal their own terms.
+3. Recognizes not all the data included in a single OpenRTB transaction is
+   subject to the same legal agreement. For example, the non-personal data of
+   make and model of the device used by an individual organization might be
+   shared under a different legal basis to the personal data of an individual
+   when both are included in the same data structure. Another example; could be
+   the legal basis for each individual enhanced identifier included in the
+   request might be different.
+4. Signal non-personal data - Most data protection laws require an impact
+   assessment to determine the risk associated with the data or processing.
+   Where non-personal data is concerned no basis is required for collection and
+   processing. An improvement this proposal enables is an explanation concerning
+   why non-personal data is not personal data thus clearly signaling to others
+   why the data is not personal data and is not subject to any restrictions.
+   This proposal supports the provision of such an explanation.
 
 The proposal enables innovation concerning the use of data without compromising
 each data using organization’s freedom to choose how to comply with data laws.
 
 ### General Use
 
-Adds a new optional array field named Terms Unique Identifier shortened to `tui`
+Adds a new optional array field named Terms Document Locator shortened to `tdl`
 to all data to provide a reference to a unique document explaining the terms for
 collection, sharing, use, and restrictions associated with the associated data.
 Terms might also include the legal contract that MUST be in place between the
 sender and recipient before the data is transferred.
 
-The `tui` field MUST always be shared along with the data. Put another way, it
-would be a breach of the proposal to pass on data that has an `tui` label
-without also making the `tui` label available to the recipient.
+The `tdl` field MUST always be shared along with the data. Put another way, it
+would be a breach of the proposal to pass on data that has an `tdl` label
+without also making the `tdl` label available to the recipient.
 
-Data Users that receive `tui` labelled data then create inclusion and exclusion
-lists of `tui` values.
+Data Users that receive `tdl` labelled data then create inclusion and exclusion
+lists of `tdl` values.
 
 Over time common combinations of terms documents will be created and amalgamated
 such that most common data collection, sharing, use, and restrictions are
@@ -513,14 +524,14 @@ there were many more. For example, there could be common “Not personal data in
 the EU”, “EU advertising funded publisher”, or a “California payment funded
 publisher” label documents which cover all common use cases.
 
-An example data structure with the `tui` field in an OpenRTB request with
+An example data structure with the `tdl` field in an OpenRTB request with
 emphasis added just to the device element is shown.
 
 ```json
 {
     "id": "7979d0c78074638bbdf739ffdf285c7e1c74a691",
     "device": {
-        "tui": [ "https://ex.io/eu-ads-v1.html" ],
+        "tdl": [ "https://ex.io/eu-ads-v1.html" ],
         "make": "Samsung",
         "model": "SCH-I535",
         "os": "Android",
@@ -536,40 +547,40 @@ emphasis added just to the device element is shown.
 }
 ```
 
-A similar `tui` field added to the Set-Cookie response header in HTTP, where the
+A similar `tdl` field added to the Set-Cookie response header in HTTP, where the
 data has been replaced with ellipsis for brevity, is shown.
 
 ```text
 Set-Cookie: device={ ... }; Expires=Thu, 21 Oct 2025 07:28:00 GMT; Secure; 
 HttpOnly;
-TUI=https://ex.io/eu-ads-v1.html;
+TDL=https://ex.io/eu-ads-v1.html;
 ```
 
-For those HTTP clients that do not know how to handle the `tui` field they will
+For those HTTP clients that do not know how to handle the `tdl` field they will
 just ignore it. Therefore, this is a non-breaking change.
 
-For those using robots.txt to signal crawlers use of content the `tui` label
+For those using robots.txt to signal crawlers use of content the `tdl` label
 would be added as a new line. See the following example.
 
 ```text
 User-Agent: *
-TUI: https://www.facebook.com/legal/automated_data_collection_terms
+TDL: https://www.facebook.com/legal/automated_data_collection_terms
 Allow: /
 ```
 
-The placement of one or more `tui` fields between the `User-Agent` and the
+The placement of one or more `tdl` fields between the `User-Agent` and the
 `Allow` fields indicates the terms under which the allow operation is granted.
-Observe that the URL used for the TUI label is one that Meta include in their
+Observe that the URL used for the TDL label is one that Meta include in their
 current robots.txt in the form of a comment that is not easily identifiable to a
 machine.[^6]
 
 [^6]: <https://facebook.com/robots.txt>
 
-When used in HTML any content element can have the `tui` attribute added to it.
+When used in HTML any content element can have the `tdl` attribute added to it.
 See the following example of a division containing many paragraphs.
 
 ```HTML
-<div tui=”https://ex.io/eu-ads-v1.html”>
+<div tdl=”https://ex.io/eu-ads-v1.html”>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 </p>
@@ -579,45 +590,44 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 </div>
 ```
 
-Any HTML element could have the `tui` attribute added including the `html` or
+Any HTML element could have the `tdl` attribute added including the `html` or
 the `body` element.
 
-In the previous examples the `tui` field label resolves to a document that
+In the previous examples the `tdl` field label resolves to a document that
 provides the terms under which the associated data, and all other data that
 descends from it, are to be used including any restrictions.
 
 Recipients of labelled data will then have additional information when making
 decisions concerning storage, use, or interoperability. Allow and disallow lists
-for `tui` documents could be created and shared by different organizations and
+for `tdl` documents could be created and shared by different organizations and
 then deployed by recipients. Consider the following scenarios.
 
--   An AI vendor’s crawler would only retrieve content that was associated with
-    a pre-authorized `tui` document. If allowed the `tui` document would then be
-    attached to all onwards uses of that content and verified before using the
-    content. For example; the same content with a `tui` document that allows for
-    use with discovery might be prohibited for use with AI.
--   A web browser might allow all third-party cookies to be shared where the
-    cookie is labelled and Content Security Policies (CSPs) allow provided
-    labels. Rather than restricting third-party cookies they could provide a
-    report for their users of the legal basis used over all interactions over a
-    period of time and provide the user the option to disallow specific legal
-    basis.
--   As users become educated about the possibilities a web browser’s user could
-    configure their `tui` values allow and disallow lists to be synchronized
-    from other sources including their trusted data protection authority or a
-    well-known entity that curates allow and disallow lists. Web browser vendors
-    would not need to do this on behalf of their users and thus avoid an
-    anti-competitive conflict of interest. Indeed, the same rules would apply to
-    their own data sharing within the web browser and attract the same level of
-    transparency.
--   An entity receiving data via OpenRTB could automatically discard any data
-    that is not labelled with a value that their Data Protection Officer (DPO)
-    has approved. The DPOs workload could be managed based on the frequency of
-    which new labels appear.
--   A trade body or law firm might maintain a list of allowed and disallowed
-    values for their members or customers aiding DPO curation of these lists.
--   Insurance companies might publish lists that attract lower premiums for data
-    protection insurance when applied.
+- An AI vendor’s crawler would only retrieve content that was associated with a
+  pre-authorized `tdl` document. If allowed the `tdl` document would then be
+  attached to all onwards uses of that content and verified before using the
+  content. For example; the same content with a `tdl` document that allows for
+  use with discovery might be prohibited for use with AI.
+- A web browser might allow all third-party cookies to be shared where the
+  cookie is labelled and Content Security Policies (CSPs) allow provided labels.
+  Rather than restricting third-party cookies they could provide a report for
+  their users of the legal basis used over all interactions over a period of
+  time and provide the user the option to disallow specific legal basis.
+- As users become educated about the possibilities a web browser’s user could
+  configure their `tdl` values allow and disallow lists to be synchronized from
+  other sources including their trusted data protection authority or a
+  well-known entity that curates allow and disallow lists. Web browser vendors
+  would not need to do this on behalf of their users and thus avoid an
+  anti-competitive conflict of interest. Indeed, the same rules would apply to
+  their own data sharing within the web browser and attract the same level of
+  transparency.
+- An entity receiving data via OpenRTB could automatically discard any data that
+  is not labelled with a value that their Data Protection Officer (DPO) has
+  approved. The DPOs workload could be managed based on the frequency of which
+  new labels appear.
+- A trade body or law firm might maintain a list of allowed and disallowed
+  values for their members or customers aiding DPO curation of these lists.
+- Insurance companies might publish lists that attract lower premiums for data
+  protection insurance when applied.
 
 ### Web Browser
 
@@ -650,15 +660,15 @@ fonts, styles, images, and more.
 
 Keys are separated by semi-colons`;`.
 
-The proposal requires adding an additional key named `tui-src` to the CSP which
+The proposal requires adding an additional key named `tdl-src` to the CSP which
 is a simplified implementation of the keys used for JavaScript or any other
-content type. The values following `tui-src` are the values accepted and
+content type. The values following `tdl-src` are the values accepted and
 complied with by the domain owner.
 
 A simple example with two values follows.
 
 ```text
-content-security-policy: tui-src https://ex.io/eu-ads-v1.html
+content-security-policy: tdl-src https://ex.io/eu-ads-v1.html
 https://ex.io/eu-meta-v3.html; script-src 'strict-dynamic'
 'nonce-QnDzo0LUa5zAu6ZpdTcHHwOuuRMjt1xGRukWMmc72UhAKUbZAx' 'self'
 'report-sample' 'unsafe-inline' assets.wearehearken.eu cdn.syndication.twimg.com
@@ -668,7 +678,7 @@ connect.facebook.net c.files.bbci.co.uk…
 #### Access
 
 The web browser will only retrieve and display the content where one or more of
-the `tui-src` values has been agreed to by the user of the web browser. There
+the `tdl-src` values has been agreed to by the user of the web browser. There
 will need to be a period of transition where web browsers do not strictly
 enforce this requirement.
 
@@ -679,19 +689,19 @@ shown in the address bar of the web browser no additional checks of the CSP are
 required.
 
 Where the domain associated with the storage operation is different the CSP of
-the domain shown in the address bar MUST include the `tui` label associated with
-the write operation if the write operation is be successful. The `tui` label is
+the domain shown in the address bar MUST include the `tdl` label associated with
+the write operation if the write operation is be successful. The `tdl` label is
 not included the address bar domain’s CSP then the write operation fails.
 
-This feature ensures that the address bar domain operator controls allowed `tui`
+This feature ensures that the address bar domain operator controls allowed `tdl`
 label for not just themselves but their suppliers.
 
 #### Retrieval
 
 When a request is received by a web browser and there is an opportunity to
 provide cookies or other data in response a check MUST be performed against the
-CSP associated with the request and only those labels that relate to `tui`
-labels that are contained in the `tui` list of the CSP can be provided in
+CSP associated with the request and only those labels that relate to `tdl`
+labels that are contained in the `tdl` list of the CSP can be provided in
 response.
 
 Consider a cookie that is written using the following syntax in an HTTP header.
@@ -699,61 +709,61 @@ Consider a cookie that is written using the following syntax in an HTTP header.
 ```text
 Set-Cookie: device={ ... } ; Expires=Thu, 21 Oct 2025 07:28:00 GMT; Secure;
 HttpOnly;
-TUI=https://ex.io/eu-ads-v1.html
+TDL=https://ex.io/eu-ads-v1.html
 ```
 
 The value of that cookie MUST only be provided where the requestor’s CSP
-indicates that they accept the `tui` label `https://ex.io/eu-ads-v1.html`. The
+indicates that they accept the `tdl` label `https://ex.io/eu-ads-v1.html`. The
 following is an example of such a CSP.
 
 ```text
-content-security-policy: tui-src https://ex.io/eu-ads-v1.html;
+content-security-policy: tdl-src https://ex.io/eu-ads-v1.html;
 ```
 
-If the CSP does not contain a matching `tui` label, then no information will be
-provided. As such the requestor will need to know the `tui` label used when
+If the CSP does not contain a matching `tdl` label, then no information will be
+provided. As such the requestor will need to know the `tdl` label used when
 writing the key before it can retrieve the value.
 
 The concepts apply to all methods of retrieving data including cookies and API
-calls. As such existing interfaces do not need to be modified as the `tui`
+calls. As such existing interfaces do not need to be modified as the `tdl`
 labels are communicated via established complementary channels. Only the methods
 associated with writing data within web browsers need to be modified.
 
 Optionally the web browser can record the identity of the requesting entity, the
-`tui` labels, and whether the data was returned or not. Using these labels web
+`tdl` labels, and whether the data was returned or not. Using these labels web
 browser vendors can provide reports to people, or in aggregate across consenting
 people, concerning the legal basis under which data is stored and provided and
 to whom.
 
 ### Examples
 
-Consider three `tui` labels L1, L2, and L3 and three actor domains A, B, and C.
+Consider three `tdl` labels L1, L2, and L3 and three actor domains A, B, and C.
 
--   A writes the value Y to key X with `tui` L1.
--   B then seeks to read key X from A with `tui` L1. Y is returned.
--   C then seeks to read key X from A with `tui` L2. The operation is disallowed
-    and Y is not returned.
--   A then seeks to read key X from A with `tui` L3 having dropped the use of
-    L1. The operation is disallowed and Y is not returned. This is because the
-    `tui` value does not match L1 provided when A wrote key X.
+- A writes the value Y to key X with `tdl` L1.
+- B then seeks to read key X from A with `tdl` L1. Y is returned.
+- C then seeks to read key X from A with `tdl` L2. The operation is disallowed
+  and Y is not returned.
+- A then seeks to read key X from A with `tdl` L3 having dropped the use of L1.
+  The operation is disallowed and Y is not returned. This is because the `tdl`
+  value does not match L1 provided when A wrote key X.
 
 Any changes to restrict third-party cookies and other data exchanges MUST not be
-applied when `tui` values are provided.
+applied when `tdl` values are provided.
 
 Now consider A and B using C to provide supplier resources.
 
--   A’s CSP includes L1 and L2 but not L3.
--   B’s CSP includes L1 and L3 but not L2.
--   C’s CSP includes L1, L2, and L3.
--   C operating as a supplier resource for A writes the value Y to key X with
-    `tui` L1. The operation succeeds.
--   C operating as a supplier resource for B reads the key X. The operation
-    succeeds.
--   C operating as a supplier resource for A writes the value Y to key W with
-    `tui` L2. The operation succeeds.
--   C operating as a supplier resource for B reads the key W. The operation
-    fails because B does not permit operations with L2 which is the `tui` value
-    used to write key W.
+- A’s CSP includes L1 and L2 but not L3.
+- B’s CSP includes L1 and L3 but not L2.
+- C’s CSP includes L1, L2, and L3.
+- C operating as a supplier resource for A writes the value Y to key X with
+  `tdl` L1. The operation succeeds.
+- C operating as a supplier resource for B reads the key X. The operation
+  succeeds.
+- C operating as a supplier resource for A writes the value Y to key W with
+  `tdl` L2. The operation succeeds.
+- C operating as a supplier resource for B reads the key W. The operation fails
+  because B does not permit operations with L2 which is the `tdl` value used to
+  write key W.
 
 ## Benefits
 
@@ -790,7 +800,7 @@ these legal basis then the publisher will know they will not be contributing to
 other publishers via their chosen suppliers.
 
 For example; a copyright holder might be comfortable making their data available
-only to human’s and not machines. By applying the `tui` label to both
+only to human’s and not machines. By applying the `tdl` label to both
 `robots.txt` and either the CSP or `html` elements they can signal this
 restriction preventing web browsers being used by AI vendors as a way of
 obtaining their copyright protected content.
@@ -820,7 +830,7 @@ a matter of competition among implementors.
 The problems of people consenting and providing proof that consent was given.
 The proposal might evolve to do so in a future iteration via the addition of
 cryptographic proofs similar to the digital signatures available in email or
-tokens that include the `tui` document, a unique identifier for the content, the
+tokens that include the `tdl` document, a unique identifier for the content, the
 identifies of the sending and receiving parties, and the date and time of the
 trans
 
@@ -839,41 +849,39 @@ matter of competition once a method of labelling data is established.
 Using data labels to label content such that digital rights holders can express
 the basis under which the content is provided.
 
-## TUI guidance
+## TDL guidance
 
 Users of this proposal MUST consider the following.
 
--   TUI values must be unchanging once published.
+- TDL values must be unchanging once published.
 
 Users of this proposal SHOULD consider the following if their documents are to
 be widely used.
 
--   TUI values should be short, and publicly available to reduce additional data
-    overhead.
--   To avoid administrative complexity in practice organizations will benefit
-    from working together to agree on common terms documents for common
-    purposes.
--   Applying terms documents to groups of related data is preferable for
-    efficiency than creating legal basis documents for each individual data
-    item. For example, groups of data like those describing the location or
-    characteristics of a device are preferable to ones that describe each
-    individual aspect of that data.
+- TDL values should be short, and publicly available to reduce additional data
+  overhead.
+- To avoid administrative complexity in practice organizations will benefit from
+  working together to agree on common terms documents for common purposes.
+- Applying terms documents to groups of related data is preferable for
+  efficiency than creating legal basis documents for each individual data item.
+  For example, groups of data like those describing the location or
+  characteristics of a device are preferable to ones that describe each
+  individual aspect of that data.
 
 Users of this proposal MAY wish to consider the following.
 
--   When interacting with people to incorporate TUIs into their user
-    documentation in addition to information that describes the data stored on
-    the device. For example; updating privacy policies to not only list cookies,
-    but also data use beyond the web browser.
--   When not interacting with people, to publish the TUIs that they share or use
-    data under such that they are easily inspectable by other market
-    participants.
--   Seek certification of terms documents from relevant authorities such as the
-    Information Commissioner’s Office (ICO) that operate such certification
-    schemes. Such certification schemes are not within the scope of this
-    proposal. It is likely such certification activities would be carried out by
-    Data Protection Officers and not the engineers that implement support for
-    the TUI signal.
+- When interacting with people to incorporate TDLs into their user documentation
+  in addition to information that describes the data stored on the device. For
+  example; updating privacy policies to not only list cookies, but also data use
+  beyond the web browser.
+- When not interacting with people, to publish the TDLs that they share or use
+  data under such that they are easily inspectable by other market participants.
+- Seek certification of terms documents from relevant authorities such as the
+  Information Commissioner’s Office (ICO) that operate such certification
+  schemes. Such certification schemes are not within the scope of this proposal.
+  It is likely such certification activities would be carried out by Data
+  Protection Officers and not the engineers that implement support for the TDL
+  signal.
 
 ## Conclusion
 
@@ -909,10 +917,10 @@ they can use organizational measures to restrict and monitor for abuse.
 The following technical standards need to be modified and implemented for this
 proposal to be realized.
 
-1.  [OpenRTB](../../../AppData/Roaming/Microsoft/Word/OpenRTB.md)
-2.  [HTTP Cookies](../../../AppData/Roaming/Microsoft/Word/IETF-HTTP.md)
-3.  [Content Security Policy 2](../../../AppData/Roaming/Microsoft/Word/CSP.md)
-4.  [Robots.txt](../../../AppData/Roaming/Microsoft/Word/IETF-Robots.md)
+1. [OpenRTB](../../../AppData/Roaming/Microsoft/Word/OpenRTB.md)
+2. [HTTP Cookies](../../../AppData/Roaming/Microsoft/Word/IETF-HTTP.md)
+3. [Content Security Policy 2](../../../AppData/Roaming/Microsoft/Word/CSP.md)
+4. [Robots.txt](../../../AppData/Roaming/Microsoft/Word/IETF-Robots.md)
 
 Each of the links in the above list provides the proposed text changes to these
 documents.

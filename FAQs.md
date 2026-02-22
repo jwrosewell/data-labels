@@ -8,47 +8,9 @@ are likely many other innovations and alternative approaches that will emerge in
 practice. The answers should be considered for guidance and inspiration.
 
 The questions and answers are divided between those that are general, artificial
-intelligence, advertising, and web browser specific specific.
+intelligence, advertising, and web browser specific.
 
-Contents
-
-[Frequently Asked Questions](#frequently-asked-questions)
-
-[General](#general)
-
-[Who will author data label documents?](#who-will-author-data-label-documents)
-
-[What if there are multiple data label documents for the same type of
-data?](#what-if-there-are-multiple-data-label-documents-for-the-same-type-of-data)
-
-[How will data labels be applied to existing
-contracts?](#how-will-data-labels-be-applied-to-existing-contracts)
-
-[Who will monitor data label documents?](#who-will-monitor-data-label-documents)
-
-[Are data labels machine readable?](#are-data-labels-machine-readable)
-
-[Artificial Intelligence](#advertising)
-
-[Do data labels work with robots.txt?](#do-data-labels-work-with-robotstxt)
-
-[Do data labels work with HTML?](#do-data-labels-work-with-html)
-
-[Do data labels work for machine only data
-types?](#do-data-labels-work-for-machine-only-data-types)
-
-[Web Browsers](#web-browsers)
-
-[How does the proposal protect publisher’s
-data?](#how-does-the-proposal-protect-publishers-data)
-
-[Can domains lie about the data label documents they are bound
-by?](#can-domains-lie-about-the-data-label-documents-they-are-bound-by)
-
-[What if a third party lies about the data label documents they
-support?](#what-if-a-third-party-lies-about-the-data-label-documents-they-support)
-
-### General
+## General
 
 ### Who will author data label documents?
 
@@ -90,13 +52,13 @@ falls outside a preset threshold.
 
 ### Are data labels machine readable?
 
-Yes. Each TUI is a unique identifier. There will likely be TUI documents for
-specific use cases and data types. Each organization will decide which TUI to
-accept or reject and how to handle TUI values that they have not yet
+Yes. Each TDL is a unique identifier. There will likely be TDL documents for
+specific use cases and data types. Each organization will decide which TDL to
+accept or reject and how to handle TDL values that they have not yet
 categorized. When their agents encounter these documents they will know how to
 respond based on these decisions.
 
-A TUI document might combine via reference many other TUI values to avoid
+A TDL document might combine via reference many other TDL values to avoid
 duplication.
 
 ### Is there a data overhead associated with data labels?
@@ -133,7 +95,7 @@ terms under which the subsequent Allow lines apply.
 
 ### Do data labels work with HTML?
 
-Yes. Any HTML element can have a tui attribute added to it indicating the terms
+Yes. Any HTML element can have a tdl attribute added to it indicating the terms
 associated with the content contained within the tag. Therefore a web page might
 contain content that is made available under different terms. For example; the
 summary might be available for any use, but the body of the page might require
@@ -142,7 +104,7 @@ different terms.
 ### Do data labels work for machine only data types?
 
 Yes. Any data schema can be modified to support the data labels extension which
-is merely an array of TUI values provided as strings.
+is merely an array of TDL values provided as strings.
 
 ### How do data labels work with payment models?
 
@@ -158,11 +120,11 @@ foundational component upon which to build.
 
 ### How does the proposal protect publisher’s data?
 
-The Content Security Policy (CSP) will advertise to the web browser the TUI
+The Content Security Policy (CSP) will advertise to the web browser the TDL
 documents that the domain operator is bound by. When data is retrieved from the
 web browser via cookies, or in the future other upgraded storage, then the CSP
-of the publisher, the TUI applied to the cookie when set, and any third-parties
-included on the page must all contain the same TUI value for the data to be
+of the publisher, the TDL applied to the cookie when set, and any third-parties
+included on the page must all contain the same TDL value for the data to be
 retrieved. Thus publishers will be able to control which third-parties can
 access data.
 
@@ -175,16 +137,16 @@ actors being caught and bought to justice.
 ### What if a third party lies about the data label documents they support?
 
 It is likely that those using data labels in commercial contracts will modify
-existing audit and reporting provisions to include TUI monitoring and ensure
+existing audit and reporting provisions to include TDL monitoring and ensure
 there is a requirement for any onward sharing of data to be bound by the same
 data label document.
 
 All storage retrieval requests under the proposal will require the CSP to
-advertise support for the necessary TUI documents.
+advertise support for the necessary TDL documents.
 
 Therefore when a publishers or other party observes other parties interacting
 with the data they can ask their supply chain to report the parties that have
-downstream commercial contracts and the TUIs involved.
+downstream commercial contracts and the TDLs involved.
 
 Where a party bound by the data label document has not complied with the
 provision to bind further parties to the same data label document this will
