@@ -29,9 +29,9 @@ Contributors:
   unique identifier within a scheme agreed by the parties. A URL implementation
   remains the primary example.
 - Modified the CSP changes to require the user agent to confirm that the user
-  has accepted at least on the TDL values. This is needed to prevent web
+  has accepted at least one of the TDL values. This is needed to prevent web
   browsers being used to obtain content protected by copyright via display to
-  users.
+  people.
 
 ## Executive Summary
 
