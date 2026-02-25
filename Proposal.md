@@ -306,7 +306,7 @@ OpenRTB defines a request from a publisher, or agent acting on their behalf, to
 an auction exchange that then passes the information about the opportunity to
 advise to participants in the auction. The concept is identical to a real-world
 auction. The difference is computers complete the auction within a fraction of a
-second rather than people, and there are many more of them.
+second, and there are many more of them.
 
 Just like any auction the value that can be obtained by the seller is increased
 when there are more prospective buyers in the auction. Also, just like a
