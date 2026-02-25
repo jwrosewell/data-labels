@@ -21,10 +21,10 @@ that describes the legal basis associated with the data at the node.
 TDL documents must be immutable and never change once published. They should
 therefore contain a version component in their construction.
 
-The implementor detects a change to the content of the TDL document which does
-not relate to user preferences such as language, then the implementor SHOULD
-consider the TDL value to be unusable and reject it. This behavior encourages
-authors of TDL documents to exercise strict version controls.
+If the implementor detects a change to the content of the TDL document which
+does not relate to user preferences such as language, then the implementor
+SHOULD consider the TDL value to be unusable and reject it. This behavior
+encourages authors of TDL documents to exercise strict version controls.
 
 The root level of a hierarchy SHOULD contain a `tdl` field. Where it doesn’t
 then the recipient can’t assume anything and MUST operate as if no legal basis
