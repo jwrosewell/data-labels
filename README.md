@@ -14,6 +14,7 @@ protections, protect content subject to copyright, and competition in digital
 markets.
 
 - [Proposal](Proposal.md) - A comprehensive explanation with examples
+- [Frequently Asked Questions](FAQs.md) - Common questions addressed
 - [Overview](Overview.pdf) - Introductory presentation (intended to be delivered
   by the authors which currently excludes the AI use case)
 - Dependent existing technical standards
@@ -25,4 +26,4 @@ markets.
   legislation has been implemented
 - [Appendix2](Appendix2.md) - Regulators or Government Officials: Statements of
   Support
-- [Appendix3](Appendix3.md) - Artificial Intelligence
+- [Appendix3](Appendix3.md) - Artificial Intelligence (to be completed)
