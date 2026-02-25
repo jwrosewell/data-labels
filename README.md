@@ -22,6 +22,9 @@ markets.
   - [Content Security Policy Level 2](CSP.md)
   - [OpenRTB](OpenRTB.md)
   - [Robots.txt](IETF-Robots.md)
+- Example Terms Documents
+  - [Foundation Model Production](example/tdl/ietf/v1/foundation-model-production.md)
+  - [Search](example/tdl/ietf/v1/search.md)
 - [Appendix1](Appendix1.md) - Countries where GDPR or ‘essentially equivalent’
   legislation has been implemented
 - [Appendix2](Appendix2.md) - Regulators or Government Officials: Statements of
