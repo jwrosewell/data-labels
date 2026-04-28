@@ -7,8 +7,8 @@ chapters to include this text are to be determined.*
 
 ## Terms Document Locators (TDL) Line
 
-A new line titled `tdl` or `terms-document-locator` will be added between
-User-Agent and Allow/Disallow lines.
+A attribute titled `tdl` or `terms-document-locator` will be added between
+User-Agent and Allow/Disallow lines. This field may appear multiple times.
 
 The purpose of the `tdl` label is to provide a reference to an immutable
 document that contains the terms under which a crawler can collect, store, use,
@@ -29,8 +29,14 @@ TDL: https://www.facebook.com/legal/automated_data_collection_terms
 Allow: /
 ```
 
-TDL documents MUST be immutable and never change once published. They SHOULD
+`tdl` documents MUST be immutable and never change once published. They SHOULD
 contain a version component in their construction.
+
+Where many `tdl` attributes are present the documents will be read in the order
+provided.
+
+The `tdl` attribute many be present in upper or lower case or a combination of
+the two.
 
 If the implementor detects a change to the content of the TDL document which
 does not relate to user preferences such as language, then the implementor
