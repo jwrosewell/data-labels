@@ -8,7 +8,7 @@ Lab AAMP protocols where they exchange the same classes of data.*
 ## Why AdCP needs labels
 
 AdCP tasks move exactly the data whose terms matter most. The
-`sync_audiences` task carries hashed emails, hashed phone numbers and
+`sync_audiences` task carries hashed email addresses, hashed phone numbers and
 identity-graph tokens for individual people. The `get_signals` task
 returns audience segments a provider offers for activation. The
 `log_event` task carries the identifier set used to attribute a
